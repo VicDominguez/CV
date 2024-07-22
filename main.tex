@@ -1,0 +1,256 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{Blue}{HTML}{0000CD}
+\definecolor{RossoCorsa}{HTML}{CC0000}
+\definecolor{MidnightPurple}{HTML}{280137}
+\definecolor{SilverSand}{HTML}{B3C3C7}
+\definecolor{CarolinaBlue}{HTML}{2D99E0}
+\definecolor{SpanishBlue}{HTML}{2B71B3}
+\definecolor{DarkConflowerBlue}{HTML}{294273}
+\definecolor{RaisinBlack}{HTML}{1D1F29}
+\definecolor{CastletonGreen}{HTML}{005843}
+\definecolor{Saffron}{HTML}{F4BE2B}
+\definecolor{Apricot}{HTML}{F4CAAB}
+
+\colorlet{name}{black} %nombre
+\colorlet{tagline}{SpanishBlue} %subtitulo nombre
+\colorlet{heading}{MidnightPurple} %Encabezados de sección
+\colorlet{headingrule}{MidnightPurple} % Barras horizontales
+\colorlet{accent}{MidnightPurple} %Subtitulos en los encabezados principales, color iconos
+\colorlet{emphasis}{SpanishBlue} % Encabezados principales en los contenidos de experiencia, educación..
+
+%\colorlet{tagline}{SpanishBlue} %subtitulo nombre
+%\colorlet{heading}{DarkConflowerBlue} %Encabezados de sección
+%\colorlet{headingrule}{MidnightPurple} % Barras horizontales
+%\colorlet{accent}{MidnightPurple} %Subtitulos en los encabezados principales, color iconos
+%\colorlet{emphasis}{SpanishBlue} % Encabezados principales en los contenidos de experiencia, educación..
+
+
+\colorlet{body}{LightGrey} % Texto
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear}
+
+
+\begin{document}
+    \name{Victor Manuel Domínguez Rivas}
+    \tagline{Computer Engineer \& Software Developer}
+    % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+    %% You can add multiple photos on the left or right
+    \photoR{2.5cm}{avatar}
+    % \photoL{2cm}{Yacht_High,Suitcase_High}
+    \personalinfo{%
+      % Not all of these are required!
+      % You can add your own with \printinfo{symbol}{detail}
+      \email{viconel27@gmail.com}
+      \phone{(+34) 606605634}
+      \location{Torrejón de Ardoz}
+      \github{VicDominguez} % I'm just making this up though.
+    %   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+      %% You can add your own arbitrary detail with
+      %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+      % \printinfo{\faPaw}{Hey ho!}
+      %% Or you can declare your own field with
+      %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+      % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+      % \gitlab{your_id}
+    	%%
+      %% For services and platforms like Mastodon where there isn't a
+      %% straightforward relation between the user ID/nickname and the hyperlink,
+      %% you can use \printinfo directly e.g.
+      % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+      %% But if you absolutely want to create new dedicated info fields for
+      %% such platforms, then use \NewInfoField* with a star:
+      % \NewInfoField*{mastodon}{\faMastodon}
+      %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+      %% the full hyperlink.
+      % \mastodon{@username@instance}{https://instance.url/@username}
+    }
+    
+    \makecvheader
+    
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    \AtBeginEnvironment{itemize}{\small}
+    
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.66}
+    
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+    
+        \cvsection{Experience}
+
+            \cvevent{Embedded Software Engineer}{TTTech Auto}{July 2023 -- Currently}{Madrid, Spain}
+     
+                \begin{itemize}
+                    \item \textbf{Development} of real-time software for various OS and ARM-based SoCs.
+                    \item \textbf{Implementation} and \textbf{evolution} of CI/CD pipelines and package management.
+                    \item Software \textbf{Integration} and board \textbf{Bring-up} for customer ECUs.
+                    \item \textbf{Experience} with SAFe methodology and international teams.
+                \end{itemize}
+
+                \divider\newline
+        
+            \cvevent{Web Development}{Freelance}{September 2021 -- December 2022}{Madrid, remote}
+            
+                \begin{itemize}
+                    \item Backend development of a professional association's website in \textbf{Drupal 10}, emphasis of digitalization of several procedures as projects approvals or payments.
+                    \item Implementation of cryptographic and signature components.
+                \end{itemize}
+                
+                \divider\newline
+            
+            \cvevent{Formula Student Team Internship}{UPMRacing}{September 2020 -- July 2021}{INSIA, Spain}
+                \begin{itemize}
+                    \item Development with \textbf{Darknet} framework of a subset of the perception system. 
+                    \item Competition in the static tests of \textbf{2021 Formula Student UK}.
+                \end{itemize}
+                
+            
+            %\cvevent{Voice data validation for detection of Parkinson's disease}{School of Computer Systems Engineering}{December 2019 -- May 2020}
+     
+            %    \begin{itemize}
+            %        \item \textbf{Feature extraction} with \textbf{Open Smile}.
+            %        \item Data analysis with \textbf{Pandas} and statistics visualisation with \textbf{Matplotlib}.
+            %    \end{itemize}
+                
+            %    \divider\newline
+                
+            %\cvevent{Prácticas en empresa}{Future Space}{Junio 2019 -- Agosto 2019}{San Sebastián de los Reyes, España}
+            %    Desarrollo del back-end de páginas web  en Java.
+        
+        % \divider
+        
+        % \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+        
+        % \begin{itemize}
+        % \item Joined the company as employe \#20 and female employee \#1
+        % \item Developed targeted advertisement in order to use user's search queries and show them related ads
+        % \end{itemize}
+        
+        
+        % use ONLY \newpage if you want to force a page break for
+        % ONLY the currentc column
+        %\newpage
+        
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+        
+        \cvsection{Knowledge}
+            \cvtag{C}
+            \cvtag{SysML}
+            \cvtag{Scrum}
+            \cvtag{Python}
+            \cvtag{Git}
+            \cvtag{Jenkins}
+            \cvtag{C++}
+            \cvtag{CI/CD}
+            \cvtag{Android}
+            \cvtag{Kotlin}
+            \cvtag{UML}
+            \cvtag{Keras}
+            \cvtag{TensorFlow}
+            \cvtag{Jetpack Compose}
+        
+        \cvsection{Soft Skills}
+            \cvachievement{\faGraduationCap}{C1 level of English}{Cambridge Advanced (CAE)}
+            \divider\newline
+            \cvachievementsimple{\faUsers}{Teamwork}
+            \divider\newline
+            \cvachievementsimple{\faChartBar}{Analytical thinking}
+            \divider\newline
+            \cvachievementsimple{\faHeartbeat}{Resilience}
+            \divider\newline
+            \cvachievementsimple{\faSync*}{Continuous learning}
+        
+    
+    \end{paracol}
+    
+    \cvsection{Studies}
+            
+         \cvstudy{Master in Distributed and Embedded Systems Software}{Polytechnic University of Madrid - School of Computer Systems Engineering}{September 2021 -- July 2024}{Average mark: 9.20}
+            \begin{itemize}
+                \item Master's thesis: \textit{\textbf{Emotional wellbeing}}, an Android app to early detect stress, depression, loneliness and risk of suicide using biometric data from wearables and questionnaires; offering advices to improve user's emotional wellbeing.
+            \end{itemize}
+        \smallskip
+        
+        
+        \cvstudy{Double Degree in Computer Engineering and Technologies for the Information Society}{Polytechnic University of Madrid - School of Computer Systems Engineering}{September 2016 -- July 2021}{Average mark: 8.37}
+            \begin{itemize}
+                \item Bachelor's thesis: \textit{\textbf{Generation of impressionistic pictures using Neural Networks}}, a ML model to apply artistic styles to pictures.
+                \item Bachelor's thesis: \textit{\textbf{Smart Driving Assistant}}, a Time Real System based on Linux and POSIX to implement several ADAS.
+            \end{itemize}
+        \smallskip
+    
+    \cvsection{Awards Received}
+        \begin{itemize}
+            \item \textbf{Best Master's Thesis} in 2023-2024 graduating class.
+            \item \textbf{Best Computer Engineering record} in 2020-2021 graduating class.
+            \item \textbf{Best Information Society Technologies record} in 2020-2021 graduating class.
+        \end{itemize}
+    
+    \cvsection{Additional studies}
+    
+        \begin{itemize}
+            \item \textit{Machine Learning with TensorFlow on Google Cloud Platform} specialization in Coursera.
+            %\item \textit{Digital Signal Processing Workshop} by School of Computer Systems Engineering.
+            \item \textit{Risk Management: SAP GRC, Fraud Management and Cybersecurity} by Deloitte.
+        \end{itemize}
+        
+\end{document}
