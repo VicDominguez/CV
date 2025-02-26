@@ -41,7 +41,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage[a-1b]{pdfx}
 \RequirePackage{accsupp}
-\RequirePackage[margin=2cm]{geometry}
+\RequirePackage[left=2cm, right=2cm, columnsep=1.2cm]{geometry}
 \RequirePackage[fixed]{fontawesome5}
 \RequirePackage{ifxetex,ifluatex}
 \RequirePackage{scrlfile}
@@ -257,7 +257,7 @@
 \newcommand{\namefont}{\Huge\bfseries}
 \newcommand{\taglinefont}{\large\bfseries}
 \newcommand{\personalinfofont}{\footnotesize\bfseries}
-\newcommand{\cvsectionfont}{\LARGE\bfseries}
+\newcommand{\cvsectionfont}{\Large\bfseries}
 \newcommand{\cvsubsectionfont}{\large\bfseries}
 
 \newcommand{\makecvheader}{%
